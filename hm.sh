@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Creating Environment for Bot" >&2
+
+{
+
 #Updating & Upgrading System
 
 sudo apt-get update
@@ -16,3 +20,5 @@ sudo npm install -g typescript
 git clone https://github.com/arghyac35/aria-telegram-mirror-bot.git && cd aria-telegram-mirror-bot
 npm install --legacy-peer-deps
 npm audit fix
+
+} &> /dev/null
